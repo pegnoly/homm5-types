@@ -2,6 +2,8 @@
 name = "homm5-types"
 version = "0.1.0"
 edition = "2021"
+description = "This crate contains data stuctures useful for Homm5 mods development"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
