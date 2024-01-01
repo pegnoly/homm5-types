@@ -1,14 +1,26 @@
 use serde::{Serialize, Deserialize};
-use crate::{common::{Trigger, FileRef}, Homm5Type};
+use crate::{common::{Trigger, FileRef}, Homm5Type, town::TownType};
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct BannedHeroesRaces {
+    #[serde(rename = "Item")]
+    pub items: Option<Vec<TownType>>
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct AllowedHeroes {
+    #[serde(rename = "Item")]
+    pub items: Option<Vec<String>>
+}
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct TavernFilter {
     #[serde(rename = "BannedHeroesRaces")]
-    pub banned_heroes_races: Vec<String>,
+    pub banned_heroes_races: Option<BannedHeroesRaces>,
     #[serde(rename = "BannedHeroes")]
     pub banned_heroes: Vec<String>,
     #[serde(rename = "AllowedHeroes")]
-    pub allowed_heroes: Vec<String>
+    pub allowed_heroes: Option<AllowedHeroes>
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
