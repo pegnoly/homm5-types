@@ -1,5 +1,28 @@
 use serde::{Serialize, Deserialize};
+use strum_macros::EnumString;
 use crate::{common::{Trigger, FileRef}, Homm5Type, town::TownType};
+
+#[derive(Debug, Serialize, Deserialize, EnumString, Clone)]
+pub enum PlayerID {
+    #[serde(rename = "PLAYER_NONE")]
+    PlayerNone,
+    #[serde(rename = "PLAYER_1")]
+    Player1,
+    #[serde(rename = "PLAYER_2")]
+    Player2,
+    #[serde(rename = "PLAYER_3")]
+    Player3,
+    #[serde(rename = "PLAYER_4")]
+    Player4,
+    #[serde(rename = "PLAYER_5")]
+    Player5,
+    #[serde(rename = "PLAYER_6")]
+    Player6,
+    #[serde(rename = "PLAYER_7")]
+    Player7,
+    #[serde(rename = "PLAYER_8")]
+    Player8,
+}
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BannedHeroesRaces {

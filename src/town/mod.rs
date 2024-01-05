@@ -1,5 +1,5 @@
 use serde::{Serialize, Deserialize};
-use crate::{common::{FileRef, Pos, Trigger, ArmySlot}, Homm5Type};
+use crate::{common::{FileRef, Pos, Trigger, ArmySlot}, Homm5Type, player::PlayerID};
 use strum_macros::EnumString;
 
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, EnumString, PartialEq, Eq, Hash)]
@@ -160,7 +160,7 @@ pub struct AdvMapTown {
     #[serde(rename = "Shared")]
     pub shared: FileRef,
     #[serde(rename = "PlayerID")]
-    pub player_id: String,
+    pub player_id: PlayerID,
     #[serde(rename = "CaptureTrigger")]
     pub capture_trigger: Trigger,
     #[serde(rename = "HeroDeployTrigger")]
