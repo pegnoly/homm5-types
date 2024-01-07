@@ -144,9 +144,15 @@ pub struct Quest {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct QuestsList {
+pub struct Objectives {
+    #[serde(rename = "Item")]
+    pub items: Option<Vec<Quest>>
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct QuestList {
     #[serde(rename = "Objectives")]
-    pub objectives: Option<Vec<Quest>>,
+    pub objectives: Option<Objectives>,
     #[serde(rename = "DieInWeekWithoutTowns")]
-    pub die_in_week_without_town: bool
+    pub die_in_week_without_towns: bool
 }
