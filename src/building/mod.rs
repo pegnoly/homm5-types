@@ -1,8 +1,8 @@
 use serde::{Serialize, Deserialize};
-use strum_macros::EnumString;
+use strum_macros::{EnumString, ToString};
 use crate::{common::{FileRef, Pos, Trigger}, Homm5Type, town::CreaturesUpgradesFilter};
 
-#[derive(Debug, Serialize, Deserialize, PartialEq, Hash, Eq, EnumString, Clone, Copy)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Hash, Eq, EnumString, Clone, Copy, ToString)]
 #[allow(non_camel_case_types)]
 pub enum BankType {
     BANK_NAGA_TEMPLE,
@@ -23,7 +23,7 @@ pub enum BankType {
     BANK_BTDSUNKENTEMPLE
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq, Hash, Eq, EnumString, Clone, Copy)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Hash, Eq, EnumString, Clone, Copy, ToString)]
 #[allow(non_camel_case_types)]
 pub enum NewBuildingType {
     BTD_STATUE_OF_REVELATION,
