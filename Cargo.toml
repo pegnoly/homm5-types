@@ -1,6 +1,6 @@
 [package]
 name = "homm5-types"
-version = "0.1.11"
+version = "0.1.12"
 edition = "2021"
 description = "This crate contains data stuctures useful for Homm5 mods development"
 license = "MIT"
