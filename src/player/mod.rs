@@ -1,8 +1,8 @@
 use serde::{Serialize, Deserialize};
-use strum_macros::EnumString;
+use strum_macros::{EnumString, EnumIter};
 use crate::{common::{Trigger, FileRef}, Homm5Type, town::TownType};
 
-#[derive(Debug, Serialize, Deserialize, EnumString, Clone)]
+#[derive(Debug, Serialize, Deserialize, EnumString, Clone, EnumIter)]
 pub enum PlayerID {
     #[serde(rename = "PLAYER_NONE")]
     PlayerNone,
