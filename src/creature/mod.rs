@@ -1,5 +1,5 @@
 use serde::{Serialize, Deserialize};
-use crate::common::{FileRef, Pos};
+use crate::{common::{FileRef, Pos}, Homm5Type};
 
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
@@ -154,4 +154,7 @@ pub struct AdvMapMonster {
     pub race_random_group_id: u32,
     #[serde(rename = "relationsOverrides")]
     pub relations_override: Option<String>
+}
+
+impl Homm5Type for AdvMapMonster {
 }
