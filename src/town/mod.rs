@@ -24,7 +24,7 @@ pub enum TownType {
     TownStronghold
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub enum TownBuildingType {
     #[serde(rename = "TB_TOWN_HALL")]
     TownHall, 
@@ -80,7 +80,7 @@ pub enum TownBuildingType {
     Special9,
 }
 
-#[derive(Debug, Deserialize, Serialize, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Deserialize, Serialize, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub enum TownBuildingLevel {
     #[serde(rename = "BLD_UPG_NONE")]
     BldUpgNone,
