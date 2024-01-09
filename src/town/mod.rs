@@ -160,6 +160,7 @@ pub struct AdvMapTown {
     #[serde(rename = "Shared")]
     pub shared: FileRef,
     #[serde(rename = "PlayerID")]
+    #[serde(with = "quick_xml::serde_helpers::text_content")]
     pub player_id: PlayerID,
     #[serde(rename = "CaptureTrigger")]
     pub capture_trigger: Trigger,
