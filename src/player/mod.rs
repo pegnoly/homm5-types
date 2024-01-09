@@ -27,7 +27,7 @@ pub enum PlayerID {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename = "Item")]
 pub struct BannedRace {
-    race: TownType
+    pub race: TownType
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
