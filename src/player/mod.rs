@@ -25,9 +25,14 @@ pub enum PlayerID {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+#[serde(rename = "Item")]
+pub struct BannedRace {
+    race: TownType
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BannedHeroesRaces {
-    #[serde(rename = "Item")]
-    pub items: Option<Vec<TownType>>
+    pub items: Option<Vec<BannedRace>>
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
