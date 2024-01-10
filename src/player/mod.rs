@@ -33,7 +33,7 @@ pub struct BannedRace {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BannedHeroesRaces {
     #[serde(rename = "Item")]
-    pub items: Option<Vec<TownType>>
+    pub items: Option<Vec<String>>
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
