@@ -5,31 +5,31 @@ use strum_macros::{EnumString, EnumIter, Display};
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, EnumString, PartialEq, Eq, Hash, EnumIter, Display)]
 pub enum TownType {
     #[serde(rename = "TOWN_NO_TYPE")]
-    #[strum(serialize = "TOWN_NO_TYPE")]
+    #[strum(to_string = "TOWN_NO_TYPE")]
     TownNoType,
     #[serde(rename = "TOWN_HEAVEN")]
-    #[strum(serialize = "TOWN_HEAVEN")]
+    #[strum(to_string = "TOWN_HEAVEN")]
     TownHeaven,
     #[serde(rename = "TOWN_PRESERVE")]
-    #[strum(serialize = "TOWN_PRESERVE")]
+    #[strum(to_string = "TOWN_PRESERVE")]
     TownPreserve,
     #[serde(rename = "TOWN_ACADEMY")]
-    #[strum(serialize = "TOWN_ACADEMY")]
+    #[strum(to_string = "TOWN_ACADEMY")]
     TownAcademy,
     #[serde(rename = "TOWN_DUNGEON")]
-    #[strum(serialize = "TOWN_DUNGEON")]
+    #[strum(to_string = "TOWN_DUNGEON")]
     TownDungeon,
     #[serde(rename = "TOWN_NECROMANCY")]
-    #[strum(serialize = "TOWN_NECROMANCY")]
+    #[strum(to_string = "TOWN_NECROMANCY")]
     TownNecromancy,
     #[serde(rename = "TOWN_INFERNO")]
-    #[strum(serialize = "TOWN_INFERNO")]
+    #[strum(to_string = "TOWN_INFERNO")]
     TownInferno,
     #[serde(rename = "TOWN_FORTRESS")]
-    #[strum(serialize = "TOWN_FORTRESS")]
+    #[strum(to_string = "TOWN_FORTRESS")]
     TownFortress,
     #[serde(rename = "TOWN_STRONGHOLD")]
-    #[strum(serialize = "TOWN_STRONGHOLD")]
+    #[strum(to_string = "TOWN_STRONGHOLD")]
     TownStronghold
 }
 
